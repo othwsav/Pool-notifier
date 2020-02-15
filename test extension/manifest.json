@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+
+    "name": "Pool-Notifier",
+    "description": "This extension will Notify you if the Pool arrives",
+    "version": "0.1",
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "content_scripts": [ 
+        { 
+            "js": [ "jquery.min.js", "content.js" ],
+            "matches": ["https://candidature.1337.ma/piscines"]
+        }
+    ],
+    "background": {
+        "scripts":["background.js"]
+    }
+}
